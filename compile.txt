@@ -1,0 +1,7 @@
+// requires a visual studios command line to run
+
+// to create a .dll from multiple source files
+csc /target:library /out:MyMath.dll Complex.cs Simple.cs
+
+// to create an executable with a reference to a .dll
+csc /target:exe /reference:MyMath.dll Calc.cs

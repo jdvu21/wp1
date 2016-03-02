@@ -1,0 +1,33 @@
+Windows Programming 
+Assignment #2 
+A Calculator Creation Studio 
+(Due: Tuesday, Feb 30, 2016)
+
+Objective: To become familiar with C# reflection API. To practice how to create a GUI application.
+
+What to Do:
+
+Step 1: Use the DLL you have created in PA1.
+·The DLL you created in PA1 should have two modules: SimpleCalc and ComplexCalc.
+·The SimpleCalc supports addition, subtraction, multiplication and division of two integers.
+·The ComplexCalc supports addition, subtraction, multiplication and division of two complex numbers.
+
+Step 2: Create a Windows Forms Application (calc.exe).
+·Create a GUI-based application using Windows Forms.
+·You can create the application using VS or Notepad.
+·The application will have a “File->Open” menu to allow the user to open a DLL (for example, calc.dll) at run-time.
+·It will display the classes in the loaded DLL.
+·It will also display the methods of each of the classes and the parameters each takes.
+·It will allow the user to pick any number of the methods to construct his/her own calculator at dynamically.
+·The user then can use the newly created calculator to perform the selected calculations.
+
+Grading: The total score is 20 points and your program will be graded on:
+Submit your complete project through GoogleDrive:
+Course Abbreviation:  WP     
+Assignment Number: 2
+GA eMail: rb128@zips.uakron.edu
+
+http://www.cs.uakron.edu/~xiao/windows/pa2.html
+PowerPoint Reference: PDN-C4-PPT
+Example: ~/C4/DialogDemo
+Example2: http://winserv1.cs.uakron.edu/rb128/CStd/Cstd.aspx
