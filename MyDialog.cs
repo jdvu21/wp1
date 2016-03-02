@@ -9,6 +9,8 @@ class MyForm : Form
     // string to be changed by the user at run time
     string dllFileName = "sample.txt";
     bool dllLoaded = false;
+    string[] classList;
+    int classCount = 0; // to be passed when the form needs to be remade
 
     MyForm()
     {
@@ -55,6 +57,8 @@ class MyForm : Form
                 // we use a dynamic object to get the classes inside the .dll
                 dynamic c = Activator.CreateInstance(className);
                 Console.WriteLine(c);
+                classCount++;
+                classList[classCount] = c.ToString();
 
                 // we're looking for these exact methods
                 // maybe later on, look into dynamically listing all methods
@@ -67,6 +71,8 @@ class MyForm : Form
             #endregion
 
             Invalidate();
+            CalcForm calc = new CalcForm();
+            //Invalidate();
         }
 
     }
@@ -109,7 +115,7 @@ class MyDialog : Form
 
         dllLabel = new Label();
         dllLabel.Location = new Point(16, 16);
-        dllLabel.Size = new Size(100, 24);
+        dllLabel.Size = new Size(120, 30);
         dllLabel.Text = "Name of target file:";
 
         dllBox = new TextBox();
@@ -138,5 +144,31 @@ class MyDialog : Form
         Controls.Add(NotOKButton);
         Controls.Add(dllLabel);
         Controls.Add(dllBox);
+    }
+}
+
+class CalcForm : Form
+{
+    Label classLabel1, classLabel2;
+    Label function1; 
+    Label function2; 
+    Label function3;
+    Label function4;
+    Label function5;
+    Label function6;
+    Label function7;
+    Label function8;
+
+    Button addButton, subButton, multiButton, divideButton, buildButton;
+    
+    public CalcForm()
+    {
+        ClientSize = new Size(800, 600);
+
+        classLabel1 = new Label();
+        classLabel1.Location = new Point(16, 16);
+        classLabel1.Size = new Size(120, 30);
+        classLabel1.Text = "Simple";
+
     }
 }
